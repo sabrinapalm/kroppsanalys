@@ -7,7 +7,7 @@ BMI: [BMI]
 
 Proteinbehov: [protein]
 
-Din uppskattade dagliga kaloriförbrukning: [calories]
+Din uppskattade dagliga kaloriförbrukning vid låg/ingen aktivitet: [calories]
 
 Om din målsättning är att gå ner i vikt bör ditt kaloriintag ligga under detta värde.
 
