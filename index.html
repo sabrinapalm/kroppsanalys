@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+   <div class="container">
+      <div id="contact">
+         <form action="" method="post">
+            <h3>Kroppsanalys</h3>
+            <fieldset>
+               <label>Kön</label>
+               <input id="gender" placeholder="Kön" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+               <label>Ålder</label>
+               <input id="age" placeholder="Ålder" type="number" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+               <label>Längd (cm)</label>
+               <input id="length" placeholder="Längd" type="number" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+               <label>Vikt (kg)</label>
+               <input id="weight" placeholder="Vikt" type="number" tabindex="4" required>
+            </fieldset>
+            <fieldset>
+               <button id="submit" name="submit" type="submit">Räkna ut</button>
+            </fieldset>
+         </form>
+      </div>
+      <div id="contact">
+         <h3>Resultat</h3>
+         <textarea id="result"> </textarea>
+         <fieldset>
+            <div class="popup">
+               <span class="popuptext" id="myPopup">Analys kopierad!</span>
+            </div>
+            <button id="copy" name="submit" type="submit">Kopiera analys</button>
+         </fieldset>
+      </div>
+      <script type="text/javascript" src="template.js"></script>
+      <script type="text/javascript" src="main.js"></script>
+
+</body>
+
+</html>
