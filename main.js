@@ -14,9 +14,6 @@
     const calories = calcCaloriesPerDay(gender, weight, length, age);
     const normalWeight = calcNormalWeight(length);
 
-    var male = 9.99 * 80 + 6.25 * 184 - 4.92 * 31 + 5;
-    var female = 9.99 * 77 + 6.25 * 165 - 4.92 * 31 - 161;
-
     result.innerHTML = template
       .replace('[gender]', gender)
       .replace('[weight]', weight)
