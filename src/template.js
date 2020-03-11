@@ -1,5 +1,5 @@
 const template = `Analysen visar:
-Baserad på följande uppgifter ([gender] [weight]kg [length]cm [age]år)
+Baserad på följande uppgifter ([gender] [weight]kg [height]cm [age]år)
 
 För din längd är riktlinjen för normalvikt mellan [normalWeight]
 

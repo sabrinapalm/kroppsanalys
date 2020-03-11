@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Kroppsanalys</title>
-   <link rel="stylesheet" type="text/css" href="styles.css" />
+   <link rel="stylesheet" type="text/css" href="/src/styles.css" />
 </head>
 
 <body>
@@ -23,14 +23,14 @@
             </fieldset>
             <fieldset>
                <label>Längd (cm)</label>
-               <input id="length" placeholder="Längd" type="number" tabindex="3" required>
+               <input id="height" placeholder="Längd" type="number" tabindex="3" required>
             </fieldset>
             <fieldset>
                <label>Vikt (kg)</label>
                <input id="weight" placeholder="Vikt" type="number" tabindex="4" required>
             </fieldset>
             <fieldset>
-               <button id="submit" name="submit" type="submit">Räkna ut</button>
+               <button id="calculate-button" name="submit" type="submit">Räkna ut</button>
             </fieldset>
          </form>
       </div>
@@ -39,13 +39,13 @@
          <textarea id="result"> </textarea>
          <fieldset>
             <div class="popup">
-               <span class="popuptext" id="myPopup">Analys kopierad!</span>
+               <span class="popuptext" id="popup">Analys kopierad!</span>
             </div>
             <button id="copy" name="submit" type="submit">Kopiera analys</button>
          </fieldset>
       </div>
-      <script type="text/javascript" src="template.js"></script>
-      <script type="text/javascript" src="main.js"></script>
+      <script type="text/javascript" src="/src/template.js"></script>
+      <script type="text/javascript" src="/src/main.js"></script>
 
 </body>
 

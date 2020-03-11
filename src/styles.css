@@ -1,4 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400, 300, 600, 400italic);
+@import url(
+  https://fonts.googleapis.com/css?family=Roboto:400,
+  300,
+  600,
+  400italic
+);
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +21,7 @@ body {
   font-weight: 100;
   font-size: 18px;
   line-height: 30px;
-  margin: 30px;
+  margin: 20px;
   color: #222;
   background: #7ac142;
 }
@@ -27,6 +32,8 @@ h3 {
 
 .container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #contact input[type='text'],
@@ -42,8 +49,8 @@ h3 {
   background: #f9f9f9;
   padding: 25px;
   margin: 5px;
-  width: 90vh;
-  height: 90vh;
+  width: 650px;
+  height: 95vh;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 

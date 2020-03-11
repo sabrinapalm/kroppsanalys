@@ -1,23 +1,25 @@
 (() => {
-  const button = document.getElementById('submit');
-  const copy = document.getElementById('copy');
-  button.addEventListener('click', function(e) {
-    e.preventDefault();
-    const gender = document.getElementById('gender').value;
-    const weight = Number(document.getElementById('weight').value);
-    const length = Number(document.getElementById('length').value);
-    const age = Number(document.getElementById('age').value);
-    const result = document.getElementById('result');
+  const button = document.querySelector('#calculate-button');
+  const copy = document.querySelector('#copy');
 
-    const BMI = calcBMI(weight, length);
+  button.addEventListener('click', e => {
+    e.preventDefault();
+    const result = document.querySelector('#result');
+
+    const gender = document.querySelector('#gender').value;
+    const weight = Number(document.querySelector('#weight').value);
+    const height = Number(document.querySelector('#height').value);
+    const age = Number(document.querySelector('#age').value);
+
+    const BMI = calcBMI(weight, height);
     const protein = calcProteinPerDay(weight);
-    const calories = calcCaloriesPerDay(gender, weight, length, age);
-    const normalWeight = calcNormalWeight(length);
+    const calories = calcCaloriesPerDay(gender, weight, height, age);
+    const normalWeight = calcNormalWeight(height);
 
     result.innerHTML = template
       .replace('[gender]', gender)
       .replace('[weight]', weight)
-      .replace('[length]', length)
+      .replace('[height]', height)
       .replace('[age]', age)
       .replace('[BMI]', BMI)
       .replace('[protein]', protein)
@@ -25,27 +27,33 @@
       .replace('[normalWeight]', normalWeight);
   });
 
-  copy.addEventListener('click', function(e) {
+  copy.addEventListener('click', e => {
     result.select();
     document.execCommand('copy');
-    var popup = document.getElementById('myPopup');
+    var popup = document.querySelector('#popup');
     popup.classList.toggle('show');
   });
 
-  const calcBMI = (weight, length) => Math.round((weight / (((length / 100) * length) / 100)) * 10) / 10;
+  const calcBMI = (weight, height) =>
+    Math.round((weight / (((height / 100) * height) / 100)) * 10) / 10;
 
   const calcProteinPerDay = weight => Math.round(1.5 * weight) + ' gram/dag';
 
-  const calcCaloriesPerDay = (gender, weight, length, age) => {
+  const calcCaloriesPerDay = (gender, weight, height, age) => {
     if (gender.toLowerCase() === 'kvinna') {
-      return Math.round(9.99 * weight + 6.25 * length - 4.92 * age - 161) + ' kalorier/dag';
-    } else {
-      return Math.round(9.99 * weight + 6.25 * length - 4.92 * age + 5) + ' kalorier/dag';
+      return (
+        Math.round(9.99 * weight + 6.25 * height - 4.92 * age - 161) +
+        ' kalorier/dag'
+      );
     }
+    return (
+      Math.round(9.99 * weight + 6.25 * height - 4.92 * age + 5) +
+      ' kalorier/dag'
+    );
   };
 
-  const calcNormalWeight = length => {
-    switch (length) {
+  const calcNormalWeight = height => {
+    switch (height) {
       case 140:
         return '39 - 49 kg';
         break;
